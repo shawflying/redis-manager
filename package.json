@@ -16,7 +16,9 @@
   ],
   "author": "shawflying",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron": "~1.6.2",
+    "electron-packager": "^8.7.2",
+    "electron-prebuilt": "^1.4.13"
   },
   "dependencies": {
     "redis": "^2.8.0",
