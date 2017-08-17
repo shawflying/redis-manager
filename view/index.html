@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>redis manager</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<div class="manager">
+    <input type="text" id="key" value="17721021494" placeholder="请输入key值"/>
+    <button class="getInfoByKey" onclick="getName()">获取</button>
+    <input type="text" id="my"/>
+</div>
+</body>
+
+<script>
+    var CatchClass = require('../redis/CatchClass');
+    var client = new CatchClass('QueryBaseInfoCatch', '获取设备基本信息');
+
+    var getName = function () {
+        var deviceId = document.getElementById("key").value;
+        client.getCache(deviceId, function (data) {
+            console.log(JSON.stringify(data))
+            document.getElementById("my").value = JSON.stringify(data);
+        });
+    }
+
+</script>
+</html>
