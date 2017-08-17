@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "redis-manager",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "a redis-manager",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/shawflying/redis-manager.git",
   "keywords": [
     "Electron",
     "quick",
@@ -14,8 +14,7 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "shawflying",
   "devDependencies": {
     "electron": "~1.6.2"
   },
