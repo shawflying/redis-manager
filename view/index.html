@@ -7,13 +7,28 @@
         body {
             background-color: antiquewhite;
         }
+        .header img{
+            width: 30px;
+            float: left;
+        }
+        button{
+            width: 100px;
+            border-radius: 3px;
+            background-color: transparent;
+        }
     </style>
 </head>
 <body>
+<div class="header">
+    <img src="img/0.png">
+    <p>云飞扬</p>
+</div>
 <div class="manager">
     <input type="text" id="key" value="17721021494" placeholder="请输入key值"/>
     <button class="getInfoByKey" onclick="getName()">获取</button>
-    <input type="text" id="my"/>
+    <div contenteditable="true" id="my">
+
+    </div>
 </div>
 </body>
 
@@ -25,7 +40,7 @@
         var deviceId = document.getElementById("key").value;
         client.getCache(deviceId, function (data) {
             console.log(JSON.stringify(data))
-            document.getElementById("my").value = JSON.stringify(data);
+            document.getElementById("my").innerHTML = JSON.stringify(data);
         });
     }
 
