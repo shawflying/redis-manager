@@ -3,7 +3,7 @@ var config = {
     debug: false
 };
 var RedisClient = redis.createClient({
-    host: '127.0.0.1',
+    host: config.debug ? '127.0.0.1' : '172.16.50.141',
     port: 6379,
     db: 4,//使用第几个数据库
     maxage: 2 * 60 * 60,//缓存时间

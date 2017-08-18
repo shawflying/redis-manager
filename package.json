@@ -4,7 +4,8 @@
   "description": "a redis-manager",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager ./ --platform=win32 --arch=x64 --all --out ./build --version 1.6.12 --overwrite --icon ./view/img/0.png"
   },
   "repository": "https://github.com/shawflying/redis-manager.git",
   "keywords": [
